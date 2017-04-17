@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+table#t01 {
+    width: 100%; 
+    background-color: #f1f1c1;
+}
+</style>
+</head>
+<body>
+<h1>Welcome!</h1><br>
+
+<table style="font-family:arial; width:30%" id="01">
+<caption>Instructions for placing/retrieving/paying orders</caption>
+		<tr>
+			<th>action</th>
+			<th>method</th>
+			<th>URI</th>
+				
+		</tr>
+		<tr>	
+		<td>To place an order</td> 
+		<td>POST</td>
+		<td>/order/place</td>
+	</tr>
+		<tr>	
+		<td>To retrieve an order</td> 
+		<td>GET</td>
+		<td>/order/display/{email}/{status}</td>
+	</tr>
+		<tr>	
+		<td>To pay an order</td> 
+		<td>PUT</td>
+		<td>/order/pay/{orderID}</td>
+	</tr>
+</table>
+<br>
+<h3>An example for an acceptable order: </h3>
+<br>
+{"products": [{"productID": "101", "quantity": "100", "unitPrice":"20"},
+		{"productID": "102", "quantity": "101", "unitPrice":"20"}],
+	"currency": "CAD", "email": "auau77@gmail.com", "postCode":"1234", "countryCode":"0031"
+}
+
+</body>
+</html>

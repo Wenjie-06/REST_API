@@ -1,0 +1,19 @@
+RESTful API Design
+
+1) To creat an order: 
+use POST to URL: "/order/place", sending a JSON as shown below:
+
+Example:
+{"products": [{"productID": "101", "quantity": "100", "unitPrice":"20"},
+		{"productID": "102", "quantity": "101", "unitPrice":"20"},
+		{"productID": "103", "quantity": "102", "unitPrice":"20"}],
+	"currency": "CAD", "postCode":"1234"
+}
+
+2) To retrieve/display orders:
+use GET to URL: "/order/display/{email}"  or "/order/display/{eamil}/{orderStatus}"
+It returns all the orders matching the email (and order tatus). The orders are displayed in a chronological order.
+
+3) To pay for an order:
+use PUT to URL: "/order/pay/{orderID}"
+It returns the payment HttpStatus code, as well as the orderID and order status.
