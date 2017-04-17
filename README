@@ -7,7 +7,7 @@ Example:
 {"products": [{"productID": "101", "quantity": "100", "unitPrice":"20"},
 		{"productID": "102", "quantity": "101", "unitPrice":"20"},
 		{"productID": "103", "quantity": "102", "unitPrice":"20"}],
-	"currency": "CAD", "postCode":"1234"
+	"currency": "CAD", "email": "auau77@gmail.com", "postCode":"1234", "countryCode":"0031"
 }
 
 2) To retrieve/display orders:
